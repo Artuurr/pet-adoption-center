@@ -29,9 +29,7 @@ public class Dog_DAO_Impl implements DAO<Dog>
 	public void destroy() 
 	{
 		try 
-		{
-			pstm.close();
-			
+		{	
 			conn.close();
 		} 
 		catch (Exception ex) 
@@ -70,6 +68,18 @@ public class Dog_DAO_Impl implements DAO<Dog>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
+		
 		return dogList;
 	}
 
@@ -92,6 +102,17 @@ public class Dog_DAO_Impl implements DAO<Dog>
 		{
 			ex.printStackTrace();
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
 	}
 
 	@Override
@@ -110,6 +131,17 @@ public class Dog_DAO_Impl implements DAO<Dog>
 		catch(Exception ex) 
 		{
 			ex.printStackTrace();
+		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
 		}
 	}
 	
@@ -151,6 +183,17 @@ public class Dog_DAO_Impl implements DAO<Dog>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
 		
 		return dogList;
 	}
@@ -187,6 +230,17 @@ public class Dog_DAO_Impl implements DAO<Dog>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
 		
 		return dogList;
 	}
@@ -220,6 +274,17 @@ public class Dog_DAO_Impl implements DAO<Dog>
 			ex.printStackTrace();
 			
 			return false;
+		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
 		}
 	}
 

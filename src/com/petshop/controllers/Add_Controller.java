@@ -3,7 +3,7 @@ package com.petshop.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import com.petshop.DAO.DAO;
@@ -22,7 +22,7 @@ import javafx.scene.control.TextField;
 
 public class Add_Controller implements Initializable 
 {
-	private ApplicationContext daoConfig;
+	private AbstractApplicationContext  daoConfig;
 	
 	private DAO_Register daoReg;
 	
@@ -74,6 +74,8 @@ public class Add_Controller implements Initializable
 		dogDao = daoReg.getDogDao();
 		clientDao = daoReg.getClientDao();
 		raceDao = daoReg.getRaceDao();
+		
+		daoConfig.registerShutdownHook();
 	}
 	public void confirmDog() 
 	{

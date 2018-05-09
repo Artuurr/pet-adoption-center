@@ -29,9 +29,7 @@ public class Client_DAO_Impl implements DAO<Client>
 	public void destroy() 
 	{
 		try 
-		{
-			pstm.close();
-			
+		{	
 			conn.close();
 		}
 		catch(Exception ex) 
@@ -69,6 +67,17 @@ public class Client_DAO_Impl implements DAO<Client>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
 		
 		return ownerList;
 	}
@@ -90,6 +99,17 @@ public class Client_DAO_Impl implements DAO<Client>
 		catch(Exception ex) 
 		{
 			ex.printStackTrace();
+		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
 		}
 	}
 
@@ -137,6 +157,18 @@ public class Client_DAO_Impl implements DAO<Client>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
+		
 		return ownerList;
 	}
 	
@@ -172,6 +204,17 @@ public class Client_DAO_Impl implements DAO<Client>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
 		
 		return ownerList;
 	}
@@ -204,6 +247,17 @@ public class Client_DAO_Impl implements DAO<Client>
 			ex.printStackTrace();
 			
 			return false;
+		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
 		}
 	}
 }

@@ -34,8 +34,8 @@
       <ListView fx:id="list_clients" layoutX="71.0" layoutY="233.0" prefHeight="540.0" prefWidth="250.0" />
       <TableView fx:id="table_pets" layoutX="838.0" layoutY="251.0" prefHeight="287.0" prefWidth="200.0">
         <columns>
-          <TableColumn fx:id="column_name" prefWidth="100.0" text="C1" />
-          <TableColumn fx:id="column_race" prefWidth="100.0" text="C2" />
+          <TableColumn fx:id="column_name" prefWidth="100.0" text="Name" />
+          <TableColumn fx:id="column_race" prefWidth="100.0" text="Race" />
         </columns>
       </TableView>
    </children>

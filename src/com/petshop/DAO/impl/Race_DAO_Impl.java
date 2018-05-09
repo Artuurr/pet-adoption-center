@@ -30,8 +30,6 @@ public class Race_DAO_Impl implements DAO<Race>
 	{
 		try 
 		{
-			pstm.close();
-			
 			conn.close();
 		}
 		catch(Exception ex) 
@@ -68,6 +66,18 @@ public class Race_DAO_Impl implements DAO<Race>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
+		
 		return raceList;
 	}
 
@@ -121,6 +131,18 @@ public class Race_DAO_Impl implements DAO<Race>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
+		
 		return raceList;
 	}
 
@@ -154,6 +176,17 @@ public class Race_DAO_Impl implements DAO<Race>
 			
 			return null;
 		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
+		}
 		
 		return raceList;
 	}
@@ -178,12 +211,24 @@ public class Race_DAO_Impl implements DAO<Race>
 			{
 				return false;
 			}
+			
 		}
 		catch(Exception ex) 
 		{
 			ex.printStackTrace();
 			
 			return false;
+		}
+		finally 
+		{
+			try 
+			{
+				pstm.close();
+			}
+			catch(Exception ex) 
+			{
+				ex.printStackTrace();
+			}
 		}
 	}
 }
