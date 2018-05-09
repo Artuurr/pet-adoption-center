@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="903.0" prefWidth="1308.0" style="-fx-background-color: #3498DB;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.petshop.controllers.Main_Controller">
+   <children>
+      <AnchorPane fx:id="child_pane" layoutX="196.0" layoutY="56.0" prefHeight="765.0" prefWidth="1281.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0" />
+      <JFXButton fx:id="btn_pets" layoutX="110.0" layoutY="-1.0" onAction="#manageStages" prefHeight="58.0" prefWidth="141.0" text="Animais" />
+      <JFXButton fx:id="btn_clients" layoutX="251.0" layoutY="-1.0" onAction="#manageStages" prefHeight="58.0" prefWidth="141.0" text="Clientes" />
+      <JFXButton fx:id="btn_add" layoutX="392.0" layoutY="-1.0" onAction="#manageStages" prefHeight="58.0" prefWidth="141.0" text="Cadastrar" />
+      <Label layoutX="11.0" layoutY="11.0" text="iAdoção" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

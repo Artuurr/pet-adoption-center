@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean name="dao_register" class="com.petshop.DAO.register.DAO_Register">
+	<property name="dogDao" ref="dog_dao"></property>
+	<property name="clientDao" ref="owner_dao"></property>
+	<property name="raceDao" ref="race_dao"></property>
+	</bean>
+	
+	<bean name="dog_dao" class="com.petshop.DAO.impl.Dog_DAO_Impl" init-method="init" destroy-method="destroy">
+	</bean>
+	
+	<bean name="owner_dao" class="com.petshop.DAO.impl.Client_DAO_Impl" init-method="init" destroy-method="destroy">
+	</bean>
+	
+	<bean name="race_dao" class="com.petshop.DAO.impl.Race_DAO_Impl" init-method="init" destroy-method="destroy">
+	</bean>
+</beans>
