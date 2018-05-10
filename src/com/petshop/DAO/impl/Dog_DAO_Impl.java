@@ -86,7 +86,7 @@ public class Dog_DAO_Impl implements DAO<Dog>
 	@Override
 	public void add(Dog dog) 
 	{
-		String sql = "INSERT INTO dogs(name,race_id,owner_id) values(?,?,?)";
+		String sql = "INSERT INTO dogs(name,race_id) values(?,?)";
 		
 		try 
 		{
@@ -94,7 +94,6 @@ public class Dog_DAO_Impl implements DAO<Dog>
 			
 			pstm.setString(1, dog.getName());
 			pstm.setInt(2, dog.getRace_id());
-			pstm.setInt(3, dog.getOwner_id());
 			
 			pstm.execute();
 		}
